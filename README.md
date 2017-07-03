@@ -6,7 +6,9 @@
 
 To generate a random funny sentence with a name.
 
-*只是无聊随便写着玩玩的。。好像没什么能用上的地方*
+*只是无聊随便写着玩玩的。。用以测试下npm的publish功能。。
+不想学书上直接写个HelloWorld
+不过这种无聊的功能，好像也没什么能用上的地方 /手动摊手*
 
 ## Download
 

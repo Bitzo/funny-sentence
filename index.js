@@ -6,6 +6,16 @@
  * @Function:
  */
 
-exports.generate = function (name) {
-    return name + `, 你妈喊你回家吃饭! `;
+let funnySet = require('./funnySet');
+
+exports.add = function (func) {
+    funnySet.push(func);
 };
+
+exports.generate = function (name) {
+    let i = Math.random()*funnySet.length;
+
+    return funnySet[Math.floor(i)](name);
+};
+
+

@@ -1,7 +1,8 @@
 # bitzo-funny-sentence
 
-[![node](https://img.shields.io/node/v/gh-badges.svg)](https://nodejs.org/en/download/)
+[![node](https://img.shields.io/badge/node-%3E%3D0.6-blue.svg)](https://nodejs.org/en/download/)
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/bitzo-funny-sentence)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 To generate a random funny sentence with a name.
 
@@ -18,5 +19,15 @@ npm i bitzo-funny-sentence
 ```javascript
 let fst = require('bitzo-funny-sentence');
 
-console.log(fst.geneate('bitzo')); //bitzo, 你妈喊你回家吃饭!
+console.log(fst.geneate(`bitzo`)); //bitzo, 你妈喊你回家吃饭!
+
+//向库中添加自定义的短语
+fst.add(name => {
+   return `Hello, ` + name + `world! `;
+});
+
+for(let i=0; i<10; ++i) {
+    console.log(fst.generate(`bitzo`));
+}
+
 ```

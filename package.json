@@ -1,6 +1,6 @@
 {
   "name": "bitzo-funny-sentence",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "generate a funny sentence",
   "main": "index.js",
   "scripts": {

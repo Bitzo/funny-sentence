@@ -6,16 +6,18 @@
  * @Function:
  */
 
-let funnySet = require('./funnySet');
+const funnySet = require('./funnySet');
 
-exports.add = function (func) {
-    funnySet.push(func);
+const add = (func) => {
+  funnySet.push(func);
 };
 
-exports.generate = function (name) {
-    let i = Math.random()*funnySet.length;
-
-    return funnySet[Math.floor(i)](name);
+const generate = (name) => {
+  const i = Math.random() * funnySet.length;
+  return funnySet[Math.floor(i)](name);
 };
 
-
+module.exports = {
+  add,
+  generate,
+};

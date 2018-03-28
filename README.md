@@ -35,17 +35,26 @@ npm i bitzo-funny-sentence
 ## API
 
 ```javascript
-let fst = require('bitzo-funny-sentence');
+const fst = require('bitzo-funny-sentence');
 
-console.log(fst.geneate(`bitzo`)); //bitzo, 你妈喊你回家吃饭!
+console.log(fst.geneate('bitzo')); // bitzo, 你妈喊你回家吃饭!
 
-//向库中添加自定义的短语
-fst.add(name => {
-   return `Hello, ` + name + `world! `;
-});
+// 向库中添加自定义的短语
+fst.add(name => `Hello, ` + name + `world! `);
 
 for(let i=0; i<10; ++i) {
     console.log(fst.generate(`bitzo`));
 }
+
+// bitzo，来啊，互相伤害啊！
+// bitzo, 你咋这么厉害呢
+// 你去吃土吧，bitzo 。
+// bitzo, 你咋这么厉害呢
+// bitzo, 你妈喊你回家吃饭！
+// 你去吃土吧，bitzo 。
+// 我 bitzo 还会回来的！
+// bitzo, 你妈喊你回家吃饭！
+// 我 bitzo 还会回来的！
+// bitzo, 你妈喊你回家吃饭！
 
 ```
